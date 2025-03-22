@@ -54,10 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               VALUES ('$user_id', '$fullName', '$phone', '$profile_picture', '$bio')
               ON DUPLICATE KEY UPDATE fullName='$fullName', phone='$phone', profile_picture='$profile_picture', bio='$bio'";
 
-    // Debug: Print the user_id and query
-    echo "User ID: $user_id<br>";
-    echo "Query: $query<br>";
-
     if (mysqli_query($conn, $query)) {
         header("Location: skills.php");
         exit();
@@ -83,36 +79,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         body {
-            background-color: #c9d6ff;
-            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            background: url('images/flat-lay-workstation-with-copy-space-laptop.jpg') no-repeat center center/cover; /* Full-page background image */
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-        /* Personal Information Container */
         .container {
-            background: #fff;
-            width: 450px;
-            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            width: 500px;
+            padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9);
+            text-align: center;
         }
 
         .container h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
-            text-align: center;
             margin-bottom: 1.5rem;
             color: #333;
         }
 
-        .container form {
-            margin: 0 1rem;
-        }
-
-        /* Input Groups */
         .input-group {
             margin-bottom: 1.5rem;
         }
@@ -127,10 +117,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .input-group input,
         .input-group textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
+            font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 1rem;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
         }
 
         .input-group textarea {
@@ -145,7 +136,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             box-shadow: 0 0 5px rgba(125, 125, 235, 0.5);
         }
 
-        /* File Upload Section */
         .file-input {
             margin-bottom: 1.5rem;
         }
@@ -183,7 +173,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: #555;
         }
 
-        /* Save & Next Button */
         .btn {
             font-size: 1.1rem;
             padding: 10px 20px;
@@ -191,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             outline: none;
             border: none;
             width: 100%;
-            background: rgb(125, 125, 235);
+            background: #4a90e2;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -201,6 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .btn:hover {
             background: #07001f;
         }
+
     </style>
 </head>
 <body>
