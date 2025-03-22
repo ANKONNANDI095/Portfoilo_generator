@@ -59,27 +59,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         body {
-            background-color: #c9d6ff;
-            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            background: url('images/flat-lay-workstation-with-copy-space-laptop.jpg') no-repeat center center/cover; /* Background Image */
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-        /* Academic Background Container */
         .container {
-            background: #fff;
-            width: 450px;
-            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            width: 500px;
+            padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9);
+            text-align: center;
         }
 
         .container h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
-            text-align: center;
             margin-bottom: 1.5rem;
             color: #333;
         }
@@ -104,10 +103,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .input-group select,
         .input-group textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
+            font-size: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 1rem;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
         }
 
         .input-group input:focus,
@@ -121,12 +121,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         /* Save & Next Button */
         .btn {
             font-size: 1.1rem;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border-radius: 5px;
             outline: none;
             border: none;
             width: 100%;
-            background: rgb(125, 125, 235);
+            background: #4a90e2;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -136,6 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .btn:hover {
             background: #07001f;
         }
+
     </style>
 </head>
 <body>
