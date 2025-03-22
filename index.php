@@ -174,7 +174,7 @@
         <h1>Portfolio Generator</h1>
         <p>"Create a stunning portfolio based on your information with ease. 
         Showcase your work, skills, and achievements in a visually appealing way".</p>
-        <a href="login.php" class="sign-in-btn">Sign In</a>
+        <a href="login.php" class="sign-in-btn">Start Creating</a>
     </div>
 
     <!-- Decorative circles -->
